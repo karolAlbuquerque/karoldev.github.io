@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio pessoal de Karol Albuquerque - Desenvolvedora especializada em soluções modernas">
+    <title>KarolDev - Desenvolvedora Full Stack</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Fixo -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <span class="nav__logo-text">Karol<span class="nav__logo-highlight">Dev</span></span>
+            </div>
+            <ul class="nav__menu" id="nav-menu">
+                <li class="nav__item">
+                    <a href="#inicio" class="nav__link">Início</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#sobre" class="nav__link">Sobre</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#servicos" class="nav__link">Serviços</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#portfolio" class="nav__link">Portfólio</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#contato" class="nav__link">Contato</a>
+                </li>
+            </ul>
+            <div class="nav__toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="inicio">
+            <div class="hero__container container">
+                <div class="hero__content">
+                    <div class="hero__image-wrapper">
+                        <img src="assets/placeholder-profile.png" alt="Karol Albuquerque" class="hero__image">
+                    </div>
+                    <h1 class="hero__title fade-in">Olá, eu sou <span class="hero__title-highlight">Karol Albuquerque</span></h1>
+                    <p class="hero__subtitle fade-in">Desenvolvedora especializada em soluções modernas e de alta performance</p>
+                    <a href="#contato" class="btn btn--neon fade-in">Entre em Contato</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre Mim -->
+        <section class="about" id="sobre">
+            <div class="about__container container">
+                <h2 class="section__title fade-in">Sobre Mim</h2>
+                <div class="about__content">
+                    <p class="about__text fade-in">
+                        Sou uma desenvolvedora apaixonada por tecnologia e inovação, especializada em criar 
+                        soluções digitais que combinam funcionalidade, performance e design elegante. 
+                        Com experiência em desenvolvimento full stack, trabalho com diversas tecnologias 
+                        modernas para entregar projetos de alta qualidade.
+                    </p>
+                    <p class="about__text fade-in">
+                        Minha paixão por programação me levou a explorar diferentes áreas do desenvolvimento, 
+                        desde aplicações web responsivas até sistemas robustos em Java e Python. 
+                        Sempre busco aprender novas tecnologias e aplicar as melhores práticas do mercado.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Serviços -->
+        <section class="services" id="servicos">
+            <div class="services__container container">
+                <h2 class="section__title fade-in">Serviços</h2>
+                <div class="services__grid">
+                    <div class="service__card fade-in">
+                        <div class="service__icon">💻</div>
+                        <h3 class="service__title">Desenvolvimento de Sites</h3>
+                        <p class="service__description">
+                            Criação de sites modernos, responsivos e otimizados para todas as plataformas, 
+                            com foco em experiência do usuário e performance.
+                        </p>
+                    </div>
+                    <div class="service__card fade-in">
+                        <div class="service__icon">📱</div>
+                        <h3 class="service__title">Aplicativos Android</h3>
+                        <p class="service__description">
+                            Desenvolvimento de aplicativos nativos Android com interface intuitiva e 
+                            funcionalidades personalizadas para seu negócio.
+                        </p>
+                    </div>
+                    <div class="service__card fade-in">
+                        <div class="service__icon">⚙️</div>
+                        <h3 class="service__title">Sistemas em Java/Python/SQL</h3>
+                        <p class="service__description">
+                            Desenvolvimento de sistemas robustos e escaláveis utilizando Java, Python e 
+                            bancos de dados SQL, com arquitetura bem definida.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfólio -->
+        <section class="portfolio" id="portfolio">
+            <div class="portfolio__container container">
+                <h2 class="section__title fade-in">Portfólio</h2>
+                <div class="portfolio__grid">
+                    <div class="portfolio__card fade-in">
+                        <div class="portfolio__header">
+                            <h3 class="portfolio__title">FindMyPet</h3>
+                            <span class="portfolio__category">Aplicativo Mobile</span>
+                        </div>
+                        <p class="portfolio__description">
+                            Aplicativo desenvolvido para ajudar pessoas a encontrar seus pets perdidos, 
+                            com sistema de geolocalização e notificações em tempo real.
+                        </p>
+                        <div class="portfolio__tags">
+                            <span class="tag">Android</span>
+                            <span class="tag">Java</span>
+                            <span class="tag">Firebase</span>
+                        </div>
+                    </div>
+                    <div class="portfolio__card fade-in">
+                        <div class="portfolio__header">
+                            <h3 class="portfolio__title">Sistema Biblioteca com Hibernate</h3>
+                            <span class="portfolio__category">Sistema Web</span>
+                        </div>
+                        <p class="portfolio__description">
+                            Sistema completo de gerenciamento de biblioteca desenvolvido com Java e Hibernate, 
+                            incluindo cadastro de livros, usuários e controle de empréstimos.
+                        </p>
+                        <div class="portfolio__tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">Hibernate</span>
+                            <span class="tag">MySQL</span>
+                        </div>
+                    </div>
+                    <div class="portfolio__card fade-in">
+                        <div class="portfolio__header">
+                            <h3 class="portfolio__title">Catálogo de Filmes</h3>
+                            <span class="portfolio__category">Aplicação Web</span>
+                        </div>
+                        <p class="portfolio__description">
+                            Catálogo interativo de filmes com busca, filtros e detalhes, desenvolvido 
+                            com tecnologias web modernas e integração com API de filmes.
+                        </p>
+                        <div class="portfolio__tags">
+                            <span class="tag">HTML/CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">API REST</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section class="contact" id="contato">
+            <div class="contact__container container">
+                <h2 class="section__title fade-in">Contato</h2>
+                <div class="contact__content">
+                    <div class="contact__info fade-in">
+                        <p class="contact__text">
+                            Entre em contato comigo para discutir seu próximo projeto ou tirar suas dúvidas. 
+                            Estou sempre aberta para novas oportunidades!
+                        </p>
+                        <div class="contact__social">
+                            <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" class="contact__social-link">
+                                <span class="contact__social-icon">💬</span>
+                                WhatsApp
+                            </a>
+                            <a href="https://linkedin.com/in/karol-albuquerque" target="_blank" rel="noopener noreferrer" class="contact__social-link">
+                                <span class="contact__social-icon">💼</span>
+                                LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                    <form class="contact__form fade-in" id="contact-form">
+                        <div class="form__group">
+                            <input type="text" class="form__input" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form__group">
+                            <input type="email" class="form__input" placeholder="Seu e-mail" required>
+                        </div>
+                        <div class="form__group">
+                            <input type="text" class="form__input" placeholder="Assunto" required>
+                        </div>
+                        <div class="form__group">
+                            <textarea class="form__textarea" rows="5" placeholder="Sua mensagem" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--neon btn--full">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <span class="footer__logo">Karol<span class="footer__logo-highlight">Dev</span></span>
+                    <p class="footer__text">Desenvolvendo soluções modernas com tecnologia e criatividade.</p>
+                </div>
+                <div class="footer__links">
+                    <h4 class="footer__title">Links Rápidos</h4>
+                    <ul class="footer__menu">
+                        <li><a href="#inicio" class="footer__link">Início</a></li>
+                        <li><a href="#sobre" class="footer__link">Sobre</a></li>
+                        <li><a href="#servicos" class="footer__link">Serviços</a></li>
+                        <li><a href="#portfolio" class="footer__link">Portfólio</a></li>
+                        <li><a href="#contato" class="footer__link">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; 2024 Karol Albuquerque. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
+
