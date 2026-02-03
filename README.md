@@ -100,17 +100,69 @@ Para alterar as cores:
 
 ### Atualizar Links de Contato
 
-1. **WhatsApp**: Edite a linha 146 em `index.html`
+1. **WhatsApp**: Edite a linha 185 em `index.html`
    ```html
-   <a href="https://wa.me/5511999999999" ...>
+   <a href="https://wa.me/5562982287887" ...>
    ```
-   Substitua `5511999999999` pelo seu número (formato: código do país + DDD + número)
+   Substitua `5562982287887` pelo seu número (formato: código do país + DDD + número)
 
-2. **LinkedIn**: Edite a linha 149 em `index.html`
+2. **LinkedIn**: Edite a linha 189 em `index.html`
    ```html
-   <a href="https://linkedin.com/in/karol-albuquerque" ...>
+   <a href="https://www.linkedin.com/in/karoline-albuquerque-7b59b253/" ...>
    ```
    Substitua pela sua URL do LinkedIn
+
+### Configurar Formulário de Contato (EmailJS)
+
+O formulário de contato usa **EmailJS** para enviar mensagens diretamente para seu e-mail. Siga estes passos:
+
+1. **Criar conta no EmailJS**
+   - Acesse [https://www.emailjs.com/](https://www.emailjs.com/)
+   - Crie uma conta gratuita (plano gratuito permite 200 emails/mês)
+
+2. **Configurar Serviço de Email**
+   - No dashboard, vá em **Email Services**
+   - Clique em **Add New Service**
+   - Escolha seu provedor (Gmail, Outlook, etc.)
+   - Siga as instruções para conectar sua conta de email
+   - **Anote o Service ID** gerado
+
+3. **Criar Template de Email**
+   - Vá em **Email Templates**
+   - Clique em **Create New Template**
+   - Use este template básico:
+     ```
+     Assunto: {{subject}}
+     
+     Nova mensagem do portfolio:
+     
+     Nome: {{from_name}}
+     Email: {{from_email}}
+     Assunto: {{subject}}
+     
+     Mensagem:
+     {{message}}
+     ```
+   - **Anote o Template ID** gerado
+
+4. **Obter Public Key**
+   - Vá em **Account** > **General**
+   - Copie sua **Public Key**
+
+5. **Configurar no Código**
+   - Abra o arquivo `script.js`
+   - Localize as linhas 5-7 e substitua:
+     ```javascript
+     const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID'; // Cole seu Service ID aqui
+     const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'; // Cole seu Template ID aqui
+     const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY'; // Cole sua Public Key aqui
+     ```
+
+6. **Testar**
+   - Envie uma mensagem de teste pelo formulário
+   - Verifique se chegou no seu email
+
+**Pronto!** Agora todas as mensagens do formulário serão enviadas para seu email automaticamente.
 
 ### Adicionar Mais Projetos ao Portfólio
 

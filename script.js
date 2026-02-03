@@ -85,7 +85,24 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ===== FORMULÁRIO DE CONTATO (Feedback visual) =====
+// ===== FORMULÁRIO DE CONTATO (EmailJS) =====
+// IMPORTANTE: Configure suas credenciais do EmailJS abaixo
+// 1. Crie uma conta em https://www.emailjs.com/
+// 2. Crie um serviço de email (Gmail, Outlook, etc.)
+// 3. Crie um template de email
+// 4. Substitua os valores abaixo com suas credenciais
+
+const EMAILJS_SERVICE_ID = 'service_ufctjws'; // Substitua pelo seu Service ID
+const EMAILJS_TEMPLATE_ID = 'template_vgieivs'; // Substitua pelo seu Template ID
+const EMAILJS_PUBLIC_KEY = 'vWUGmXUbw9ueu7bDH'; // Substitua pela sua Public Key
+
+// Inicializar EmailJS (após carregar a biblioteca)
+document.addEventListener('DOMContentLoaded', () => {
+    if (typeof emailjs !== 'undefined') {
+        emailjs.init(EMAILJS_PUBLIC_KEY);
+    }
+});
+
 const contactForm = document.getElementById('contact-form');
 
 contactForm.addEventListener('submit', (e) => {
@@ -98,19 +115,58 @@ contactForm.addEventListener('submit', (e) => {
     submitBtn.textContent = 'Enviando...';
     submitBtn.disabled = true;
     
-    // Simular envio (remover em produção e adicionar lógica real)
-    setTimeout(() => {
-        submitBtn.textContent = 'Mensagem Enviada! ✓';
-        submitBtn.style.background = 'linear-gradient(135deg, #10B981 0%, #059669 100%)';
+    // Verificar se EmailJS está configurado
+    if (EMAILJS_SERVICE_ID === 'YOUR_SERVICE_ID' || 
+        EMAILJS_TEMPLATE_ID === 'YOUR_TEMPLATE_ID' || 
+        EMAILJS_PUBLIC_KEY === 'YOUR_PUBLIC_KEY') {
+        // Se não configurado, mostrar aviso
+        submitBtn.textContent = '⚠️ Configure o EmailJS primeiro!';
+        submitBtn.style.background = 'linear-gradient(135deg, #EF4444 0%, #DC2626 100%)';
         
-        // Reset após 3 segundos
         setTimeout(() => {
             contactForm.reset();
             submitBtn.textContent = originalText;
             submitBtn.disabled = false;
             submitBtn.style.background = '';
         }, 3000);
-    }, 1500);
+        return;
+    }
+    
+    // Coletar dados do formulário
+    const formData = {
+        from_name: contactForm.querySelector('input[type="text"]').value,
+        from_email: contactForm.querySelector('input[type="email"]').value,
+        subject: contactForm.querySelectorAll('input[type="text"]')[1].value,
+        message: contactForm.querySelector('textarea').value
+    };
+    
+    // Enviar email via EmailJS
+    emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formData)
+        .then(() => {
+            // Sucesso
+            submitBtn.textContent = 'Mensagem Enviada! ✓';
+            submitBtn.style.background = 'linear-gradient(135deg, #10B981 0%, #059669 100%)';
+            
+            // Reset após 3 segundos
+            setTimeout(() => {
+                contactForm.reset();
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                submitBtn.style.background = '';
+            }, 3000);
+        })
+        .catch((error) => {
+            // Erro
+            console.error('Erro ao enviar email:', error);
+            submitBtn.textContent = 'Erro ao enviar. Tente novamente.';
+            submitBtn.style.background = 'linear-gradient(135deg, #EF4444 0%, #DC2626 100%)';
+            
+            setTimeout(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                submitBtn.style.background = '';
+            }, 3000);
+        });
 });
 
 // ===== EFEITO PARALLAX SUAVE NO HERO =====
