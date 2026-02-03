@@ -19,6 +19,9 @@ Este é um site portfolio moderno e responsivo desenvolvido com HTML, CSS e Java
 Site portfolio Karol/
 │
 ├── index.html              # Página principal
+├── petfinder.html          # Página de detalhes - PetFinder
+├── acquagyn.html           # Página de detalhes - AcquaGyn
+├── mnbvet.html             # Página de detalhes - MNB Vet
 ├── style.css               # Estilos do site
 ├── script.js               # Scripts e interatividade
 ├── README.md               # Este arquivo
@@ -166,9 +169,21 @@ O formulário de contato usa **EmailJS** para enviar mensagens diretamente para 
 
 ### Adicionar Mais Projetos ao Portfólio
 
-1. No arquivo `index.html`, localize a seção `portfolio__grid` (linha 103)
-2. Copie um dos blocos `portfolio__card`
-3. Altere título, descrição e tags conforme necessário
+1. No arquivo `index.html`, localize a seção `portfolio__grid` (linha 124)
+2. Copie um dos blocos `portfolio__card-link`
+3. Altere título, descrição, tags e o link `href` para a nova página
+4. Crie uma nova página HTML (ex: `meuprojeto.html`) baseada em `petfinder.html`
+5. Atualize o conteúdo da nova página com os detalhes do seu projeto
+6. Adicione imagens na seção de galeria (substitua os placeholders)
+
+**Estrutura de uma página de detalhes:**
+- Hero do projeto (título, categoria, tags)
+- Galeria de imagens (4+ imagens do projeto)
+- Seção "Sobre o Projeto"
+- Seção "Funcionalidades Principais"
+- Seção "Tecnologias Utilizadas"
+- Seção "Desafios e Soluções"
+- Call to Action (botão de contato)
 
 ## 🎨 Características do Design
 

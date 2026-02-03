@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PetFinder - Aplicativo para encontrar pets perdidos">
+    <title>PetFinder - KarolDev Portfolio</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Fixo -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <a href="index.html" class="nav__logo-link">
+                    <span class="nav__logo-text">Karol<span class="nav__logo-highlight">Dev</span></span>
+                </a>
+            </div>
+            <ul class="nav__menu" id="nav-menu">
+                <li class="nav__item">
+                    <a href="index.html#inicio" class="nav__link">Início</a>
+                </li>
+                <li class="nav__item">
+                    <a href="index.html#sobre" class="nav__link">Sobre</a>
+                </li>
+                <li class="nav__item">
+                    <a href="index.html#servicos" class="nav__link">Serviços</a>
+                </li>
+                <li class="nav__item">
+                    <a href="index.html#portfolio" class="nav__link">Portfólio</a>
+                </li>
+                <li class="nav__item">
+                    <a href="index.html#contato" class="nav__link">Contato</a>
+                </li>
+            </ul>
+            <div class="nav__toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero do Projeto -->
+        <section class="project-hero">
+            <div class="project-hero__container container">
+                <a href="index.html#portfolio" class="project-hero__back">← Voltar ao Portfólio</a>
+                <div class="project-hero__content">
+                    <span class="project-hero__category">Aplicativo Mobile</span>
+                    <h1 class="project-hero__title">PetFinder</h1>
+                    <p class="project-hero__subtitle">
+                        Aplicativo desenvolvido para ajudar pessoas a encontrar seus pets perdidos, 
+                        com sistema de geolocalização e notificações em tempo real.
+                    </p>
+                    <div class="project-hero__tags">
+                        <span class="tag">Android</span>
+                        <span class="tag">Java</span>
+                        <span class="tag">Firebase</span>
+                        <span class="tag">Google Maps API</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galeria de Imagens -->
+        <section class="project-gallery">
+            <div class="project-gallery__container container">
+                <h2 class="section__title">Galeria do Projeto</h2>
+                <div class="project-gallery__grid">
+                    <div class="project-gallery__item">
+                        <div class="project-gallery__placeholder">
+                            <span>📱</span>
+                            <p>Imagem 1 - Tela Principal</p>
+                        </div>
+                    </div>
+                    <div class="project-gallery__item">
+                        <div class="project-gallery__placeholder">
+                            <span>🗺️</span>
+                            <p>Imagem 2 - Mapa de Localização</p>
+                        </div>
+                    </div>
+                    <div class="project-gallery__item">
+                        <div class="project-gallery__placeholder">
+                            <span>🔔</span>
+                            <p>Imagem 3 - Sistema de Notificações</p>
+                        </div>
+                    </div>
+                    <div class="project-gallery__item">
+                        <div class="project-gallery__placeholder">
+                            <span>👤</span>
+                            <p>Imagem 4 - Perfil do Pet</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detalhes do Projeto -->
+        <section class="project-details">
+            <div class="project-details__container container">
+                <div class="project-details__content">
+                    <div class="project-details__section">
+                        <h2 class="project-details__title">Sobre o Projeto</h2>
+                        <p class="project-details__text">
+                            O PetFinder é uma solução mobile desenvolvida para Android que conecta pessoas 
+                            que perderam seus pets com aqueles que os encontraram. O aplicativo utiliza 
+                            tecnologias modernas para oferecer uma experiência completa e eficiente.
+                        </p>
+                        <p class="project-details__text">
+                            Com integração ao Firebase para autenticação e banco de dados em tempo real, 
+                            e Google Maps API para geolocalização precisa, o PetFinder facilita o 
+                            reencontro entre pets e seus donos.
+                        </p>
+                    </div>
+
+                    <div class="project-details__section">
+                        <h2 class="project-details__title">Funcionalidades Principais</h2>
+                        <ul class="project-details__list">
+                            <li>Cadastro de pets perdidos com fotos e informações detalhadas</li>
+                            <li>Geolocalização em tempo real usando Google Maps API</li>
+                            <li>Sistema de notificações push para alertas de pets próximos</li>
+                            <li>Chat integrado para comunicação entre usuários</li>
+                            <li>Filtros avançados de busca por raça, cor, tamanho e localização</li>
+                            <li>Perfis de usuários com histórico de pets cadastrados</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-details__section">
+                        <h2 class="project-details__title">Tecnologias Utilizadas</h2>
+                        <div class="project-details__tech">
+                            <div class="project-details__tech-item">
+                                <h3>Android</h3>
+                                <p>Desenvolvimento nativo para Android usando Java</p>
+                            </div>
+                            <div class="project-details__tech-item">
+                                <h3>Firebase</h3>
+                                <p>Backend como serviço para autenticação, banco de dados e notificações</p>
+                            </div>
+                            <div class="project-details__tech-item">
+                                <h3>Google Maps API</h3>
+                                <p>Integração com mapas para geolocalização e visualização de áreas</p>
+                            </div>
+                            <div class="project-details__tech-item">
+                                <h3>Material Design</h3>
+                                <p>Interface seguindo as diretrizes do Material Design do Google</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-details__section">
+                        <h2 class="project-details__title">Desafios e Soluções</h2>
+                        <p class="project-details__text">
+                            Um dos principais desafios foi implementar a geolocalização em tempo real de 
+                            forma eficiente, garantindo que as notificações fossem enviadas apenas para 
+                            usuários próximos. A solução foi utilizar Firebase Cloud Functions para 
+                            processar as localizações e enviar notificações apenas quando necessário.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="project-cta">
+            <div class="project-cta__container container">
+                <h2 class="project-cta__title">Gostou do projeto?</h2>
+                <p class="project-cta__text">Entre em contato para discutir como posso ajudar no seu próximo projeto!</p>
+                <a href="index.html#contato" class="btn btn--neon">Entre em Contato</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <span class="footer__logo">Karol<span class="footer__logo-highlight">Dev</span></span>
+                    <p class="footer__text">Desenvolvendo soluções modernas com tecnologia e criatividade.</p>
+                </div>
+                <div class="footer__links">
+                    <h4 class="footer__title">Links Rápidos</h4>
+                    <ul class="footer__menu">
+                        <li><a href="index.html#inicio" class="footer__link">Início</a></li>
+                        <li><a href="index.html#sobre" class="footer__link">Sobre</a></li>
+                        <li><a href="index.html#servicos" class="footer__link">Serviços</a></li>
+                        <li><a href="index.html#portfolio" class="footer__link">Portfólio</a></li>
+                        <li><a href="index.html#contato" class="footer__link">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; 2024 Karol Albuquerque. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
