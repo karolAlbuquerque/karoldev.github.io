@@ -262,6 +262,8 @@ section {
 /* ===== SOBRE MIM ===== */
 .about {
     background-color: var(--color-dark);
+    position: relative;
+    z-index: 2;
 }
 
 .about__content {
@@ -676,6 +678,21 @@ section {
     line-height: 1.8;
 }
 
+.project-hero__achievement {
+    font-size: 1.1rem;
+    color: var(--color-accent);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    padding: 0.75rem 1.5rem;
+    background: rgba(6, 182, 212, 0.15);
+    border: 1px solid rgba(6, 182, 212, 0.3);
+    border-radius: 12px;
+}
+
+.project-hero__achievement strong {
+    color: var(--color-white);
+}
+
 .project-hero__tags {
     display: flex;
     flex-wrap: wrap;
@@ -728,6 +745,38 @@ section {
     color: var(--color-light);
     opacity: 0.7;
     font-size: 0.9rem;
+}
+
+/* Imagem real na galeria */
+.project-gallery__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Proporção portrait para screenshots de app mobile */
+.project-gallery__item--mobile {
+    aspect-ratio: 9/16;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+/* Proporção natural - imagem define o tamanho, sem distorção */
+.project-gallery__item--natural {
+    aspect-ratio: auto;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-gallery__item--natural .project-gallery__image {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: contain;
 }
 
 /* Detalhes do Projeto */
